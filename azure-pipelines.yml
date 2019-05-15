@@ -17,7 +17,7 @@ variables:
   tag: '$(Build.BuildId)'
   
   # Agent VM image name
-  vmImageName: 'win1803'
+  vmImageName: 'windows-2019'
 
 stages:
 - stage: Build
