@@ -9,7 +9,7 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-Bin
+bin
 obj
 
 ### VisualStudioCode Patch ###
