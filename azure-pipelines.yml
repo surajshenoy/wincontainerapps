@@ -41,5 +41,5 @@ stages:
     - task: AzureWebAppContainer@1
       inputs:
         azureSubscription: RMPM
-        appName: assdsas
+        appName: dsdidshdsdsn
         containers: $(containerRegistry)/$(imageRepository):$(tag)
