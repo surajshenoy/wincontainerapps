@@ -2,21 +2,13 @@
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
-trigger:
-- master
-
-resources:
-- repo: self
-
-variables:
-  # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'cosmosdbsj'
-  imageRepository: 'cosmosdbsj'
-  containerRegistry: cosmosdbsj.azurecr.io
-  dockerfilePath: $(Build.SourcesDirectory)/Dockerfile
-  tag: $(Build.BuildId)
-  appName: CosmosDBsj
-
+tags: |
+          $(tag)
+    - task: AzureWebAppContainer@1
+      inputs:
+        azureSubscription: cosmosdbsj
+        appName: CosmosDBsj
+        containers: $(containerRegistry)/$(imageRepository):$(tag)
     # - task: AzureWebAppContainer@1
     #   inputs:
     #     azureSubscription: RMPM
