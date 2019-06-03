@@ -3,10 +3,10 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
      - task: AzureWebAppContainer@1
-      inputs:
-        azureSubscription: RMPM
-        appName: dsdidshdsdsn
-        containers: $(containerRegistry)/$(imageRepository)
+-     inputs:
+-       azureSubscription: RMPM
+-        appName: dsdidshdsdsn
+-       containers: $(containerRegistry)/$(imageRepository)
     # - task: AzureWebAppContainer@1
     #   inputs:
     #     azureSubscription: RMPM
