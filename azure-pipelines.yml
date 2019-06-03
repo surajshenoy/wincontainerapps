@@ -10,34 +10,12 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: CosmosDB
-  imageRepository: contoso
-  containerRegistry: contoso.azurecr.io
+  dockerRegistryServiceConnection: cosmosdbsj
+  imageRepository: cosmosdbsj
+  containerRegistry: cosmosdbsj.azurecr.io
   dockerfilePath: $(Build.SourcesDirectory)/Dockerfile
   tag: $(Build.BuildId)
-  appName: my-app-name1
-  
-  # Agent VM image name
-  vmImageName: 'windows-2019'
-
-stages:
-- stage: Build
-  displayName: Build and push stage
-  jobs:  
-  - job: Build
-    displayName: Build job
-    pool:
-      vmImage: $(vmImageName)
-    steps:
-    - task: Docker@2
-      displayName: Build and push an image to container registry
-      inputs:
-        command: buildAndPush
-        repository: $(imageRepository)
-        dockerfile: $(dockerfilePath)
-        containerRegistry: $(dockerRegistryServiceConnection)
-        tags: |
-          $(tag)
+  appName: CosmosDBsj
 
     # - task: AzureWebAppContainer@1
     #   inputs:
