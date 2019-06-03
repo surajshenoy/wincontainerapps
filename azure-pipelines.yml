@@ -10,11 +10,12 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'a5d49370-0237-4e0b-b6d4-5fa610fb69f3'
-  imageRepository: 'iamsrivatsawincontainerapps'
-  containerRegistry: 'ttacrv7p5x66mdtp3y.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: '$(Build.BuildId)'
+  dockerRegistryServiceConnection: CosmosDB
+  imageRepository: contoso
+  containerRegistry: contoso.azurecr.io
+  dockerfilePath: $(Build.SourcesDirectory)/Dockerfile
+  tag: $(Build.BuildId)
+  appName: my-app-name1
   
   # Agent VM image name
   vmImageName: 'windows-2019'
