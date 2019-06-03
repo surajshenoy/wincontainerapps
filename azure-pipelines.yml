@@ -2,7 +2,7 @@
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
-tags: |
+        tags: |
           $(tag)
     - task: AzureWebAppContainer@1
       inputs:
