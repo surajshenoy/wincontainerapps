@@ -2,13 +2,11 @@
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
-        tags: |
-          $(tag)
-    - task: AzureWebAppContainer@1
+     - task: AzureWebAppContainer@1
       inputs:
-        azureSubscription: cosmosdbsj
-        appName: CosmosDBsj
-        containers: $(containerRegistry)/$(imageRepository):$(tag)
+        azureSubscription: RMPM
+        appName: dsdidshdsdsn
+        containers: $(containerRegistry)/$(imageRepository)
     # - task: AzureWebAppContainer@1
     #   inputs:
     #     azureSubscription: RMPM
