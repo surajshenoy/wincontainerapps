@@ -7,7 +7,7 @@
 #       azureSubscription: RMPM
 #        appName: dsdidshdsdsn
 #       containers: $(containerRegistry)/$(imageRepository)
-     - task: AzureWebAppContainer@1
+   - task: AzureWebAppContainer@1
        inputs:
          azureSubscription: cosmosdbsj
          appName: cosmosdbsj
