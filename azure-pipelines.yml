@@ -10,8 +10,8 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: cosmosdbsj
-  imageRepository: cosmosdbsj
+  dockerRegistryServiceConnection: 'cosmosdbsj'
+  imageRepository: 'cosmosdbsj'
   containerRegistry: cosmosdbsj.azurecr.io
   dockerfilePath: $(Build.SourcesDirectory)/Dockerfile
   tag: $(Build.BuildId)
